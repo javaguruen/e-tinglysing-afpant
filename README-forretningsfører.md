@@ -15,19 +15,32 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 * Avstemme feltstøtte (strukturert informasjon ja/nei) hos megler-systemleverandører (teknisk utvalg)
 * Beslutte feltliste (DSVE-modell) for hver av de foreslåtte meldingstypene, samt hvilke felter som skal være obligatoriske
 
-# Begrep
-[Oversikt over begrep](spesifikasjoner/forretningsfører/begrep/README.md)
+# Begrep og definisjoner
+[Oversikt over begrep og definisjoner](spesifikasjoner/forretningsfører/begrep/README.md)
 
 # Prosesser og kontaktpunkter 
-* [Forhåndsavklaring](spesifikasjoner/forretningsfører/prosesser/README-forhåndsavklaring.md)
-* [Fastprisavklaring](spesifikasjoner/forretningsfører/prosesser/README-fastprisavklaring.md)
+* [Eierskifte](spesifikasjoner/forretningsfører/prosesser/README-eierskifte.md)
+* [Eierskifte, med forhåndsavklaring](spesifikasjoner/forretningsfører/prosesser/README-eierskifte-forhåndsavklaring.md)
+* [Eierskifte, med fastprisavklaring](spesifikasjoner/forretningsfører/prosesser/README-eierskifte-fastprisavklaring.md)
+* [Eierskifte, boligaksjeselskap](spesifikasjoner/forretningsfører/prosesser/README-eierskifte-boligaksjeselskap.md)
 
 # Meldingstyper (under utarbeidelse)
+### Forespørsel om opplysninger fra forretningsfører (meglerpakke) 
+* Forespørsel om forretningsførerinformasjon.
+* Forespørselen inneholder strukturert informasjon om eiendommen som skal omsettes (selger, adresse).
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/opplysningerfraforretningsfører/README-forespørsel.md)
+
 ### Opplysninger fra forretningsfører (meglerpakke) 
 * Overføring av forretningsførerinformasjon til megler.
 * Overføring av ustrukterte dokumenter (vedtekter, regnskap o.l) i tillegg til strukturerte data.
 * Informasjon om hvordan forkjøpsrett avklares
-* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/opplysningerfraforretningsfører/README.md)
+* Informasjon om hvem som håndterer styregodkjenning (via forretningsfører eller direkte til styret)
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/opplysningerfraforretningsfører/README-svar.md)
+
+
+### Forespørsel om forkjøpsrettavklaring (forhånds- eller fastpris)
+* Megler forespør forretningsfører om å avklare forkjøpsrett (enten forhåndsavklaring eller fastprisavklaring)
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README.md)
 
 ### Eierskiftemelding fra megler
 * Overføring av eierskiftemelding fra meglersystem til forretningsfører etter gjennomført aksept
@@ -36,7 +49,8 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 
 
 ### Forespørsel (søknad) om styregodkjenning (via forretningsfører)
-* Forespørsel fra megler til styret - sendt via forretningsfører 
+* Forespørsel fra megler til styret sendt via forretningsfører 
+* Kun dersom forretningsfører håndterer denne kommunikasjonen på vegne av styret (må opplyses om i meglerpakke) 
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/styregodkjenning/README-forespørsel.md)
 
 ### Svar på styregodkjenning  
@@ -52,4 +66,5 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 * Svar fra forretningsfører om eventuelle restanser
 * Kontonummer og KID for innfrielse
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/restanser/README-svar.md)
+
 

@@ -26,3 +26,4 @@ Opplysninger fra megler om gjennomført eierskifte.
 * Salgsoppgave
 
 ## Implementasjonsdetaljer
+Meglersystemet må støtte å sende meldingen på nytt ved endringer i grunnlagsdata (feltliste), eksempelvis ved endring i overtagelsesdato. Dette er endringer som er viktig for forretningsfører å få vite om så snart som mulig.
