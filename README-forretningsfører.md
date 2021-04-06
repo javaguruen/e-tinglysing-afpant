@@ -38,9 +38,26 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/opplysningerfraforretningsfører/README-svar.md)
 
 
-### Forespørsel om forkjøpsrettavklaring (forhånds- eller fastpris)
+### Forespørsel om forkjøpsrettavklaring (forhånds- eller fastprisavklaring)
 * Megler forespør forretningsfører om å avklare forkjøpsrett (enten forhåndsavklaring eller fastprisavklaring)
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README.md)
+
+### Svar med bekreftelse på prøving av forkjøpsrett (forhåndsavklaring)
+* Forretningsfører bekrefter at forhåndsavklaring av forkjøpsretten er igangsatt
+* Informasjon om meldefrist for forkjøpsrett
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-forhåndsavklaring-bekreftelse.md)
+
+### Informasjon om meldt interesse (forhåndsavklaring)
+* Forretningsfører overfører informasjon til megler om hvor mange forkjøpsrettberettige som har meldt sin interesse innen fristen
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-forhåndsavklaring-interesse.md)
+
+### Svar med bekreftelse på prøving av forkjøpsrett (fastprisavklaring)
+* Forretningsfører bekrefter at fastprisavklaring av forkjøpsretten er igangsatt
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-fastprisavklaring-bekreftelse.md)
+
+### Informasjon om forkjøpsrett benyttet (fastprisavklaring)
+* Forretningsfører overfører informasjon til megler om forkjøpsrett er benyttet og informasjon om eventuell ny kjøper som har anvendt sin forkjøpsrett
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-fastprisavklaring-avklaring.md)
 
 ### Eierskiftemelding fra megler
 * Overføring av eierskiftemelding fra meglersystem til forretningsfører etter gjennomført aksept
