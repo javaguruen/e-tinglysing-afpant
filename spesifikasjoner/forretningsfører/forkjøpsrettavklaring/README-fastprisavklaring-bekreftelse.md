@@ -11,7 +11,7 @@ Forretningsfører bekrefter til megler at avklaring av forkjøpsrett er igangsat
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForkjoepsrettAvklaring*****
+### ForkjoepsrettAvklaringFastprisBekreftelse
 #### Feltliste 
  
 

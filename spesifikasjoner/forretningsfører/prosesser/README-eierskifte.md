@@ -12,13 +12,13 @@
 		<tr>
 			<td><p>1</p></td>
 			<td><p>Bestilling boliginforapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>ForespoerselOmOpplysningerFraforretningsfoerer</p></td>
 			<td><p>Megler</p></td>
 		</tr>
 		<tr>
 			<td><p>2</p></td>
 			<td><p>Oversendelse av boliginforrapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>OpplysningerFraforretningsfoerer</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>  
 		<tr><th colspan="4">ETTER SALG</th></tr>
@@ -26,7 +26,7 @@
 			<td><p>3</p></td>
 			<td><p>Informasjon om solgt pris/salgsmelding/eierskiftemelding
 </p></td>
-<td><p></p></td>
+<td><p>EierskiftemeldingFraMegler</p></td>
 			<td><p>Megler</p></td>
 		</tr>			      		        	
         		<tr>

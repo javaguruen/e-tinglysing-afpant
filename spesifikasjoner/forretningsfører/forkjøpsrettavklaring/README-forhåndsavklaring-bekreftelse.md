@@ -11,7 +11,7 @@ Forretningsfører bekrefter til megler at prøving av forkjøpsrett er igangsatt
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForkjoepsrettAvklaring*****
+### ForkjoepsrettAvklaringForhaandsavklaringBekreftelse
 #### Feltliste 
  
 

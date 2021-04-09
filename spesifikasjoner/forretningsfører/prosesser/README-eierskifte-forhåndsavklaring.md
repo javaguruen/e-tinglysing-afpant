@@ -12,33 +12,33 @@
 		<tr>
 			<td><p>1</p></td>
 			<td><p>Bestilling boliginforapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>ForespoerselOmOpplysningerFraforretningsfoerer</p></td>
 			<td><p>Megler</p></td>
 		</tr>
 		<tr>
 			<td><p>2</p></td>
 			<td><p>Oversendelse av boliginforrapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>OpplysningerFraforretningsfoerer</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
         		<tr>
 			<td><p>3</p></td>
 			<td><p>Bestilling av forhåndsavklaring
 </p></td>
-<td><p></p></td>
+<td><p>ForespoerselOmForkjoepsrettAvklaring</p></td>
 			<td><p>Megler</p></td>
 		</tr>
         		<tr>
 			<td><p>4</p></td>
 			<td><p>Bekreftelse på prøving</p></td>
-			<td><p></p></td>
+			<td><p>ForkjoepsrettAvklaringForhaandsavklaringBekreftelse</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
         		<tr>
 			<td><p>5</p></td>
 			<td><p>Informasjon om meldt interesse
 </p></td>
-<td><p></p></td>
+<td><p>ForkjoepsrettAvklaringInteresse</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
 		<tr><th colspan="4">ETTER SALG</th></tr>
@@ -46,7 +46,7 @@
 			<td><p>6</p></td>
 			<td><p>Informasjon om solgt pris/salgsmelding/eierskiftemelding
 </p></td>
-<td><p></p></td>
+<td><p>EierskiftemeldingFraMegler</p></td>
 			<td><p>Megler</p></td>
 		</tr>	
         		<tr>

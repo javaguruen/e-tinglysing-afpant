@@ -11,7 +11,7 @@ Forespørsel om opplysninger fra forretningsfører som megler behøver for marke
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForespørselOmOpplysningerFraforretningsfoerer
+### ForespoerselOmOpplysningerFraforretningsfoerer
 #### Feltliste
 * Oppdragsnummer
 * Registerenhet (matrikkel / orgnr andel)

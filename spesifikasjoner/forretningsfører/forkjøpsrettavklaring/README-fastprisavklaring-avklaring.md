@@ -11,7 +11,7 @@ Forretningsfører informerer megler om forkjøpsrett er benyttet, samt informasj
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForkjoepsrettAvklaring*****
+### ForkjoepsrettStatusFastpris
 #### Feltliste 
  
 

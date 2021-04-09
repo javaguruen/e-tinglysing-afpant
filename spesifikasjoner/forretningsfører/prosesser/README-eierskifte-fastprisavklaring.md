@@ -12,13 +12,13 @@
 		<tr>
 			<td><p>1</p></td>
 			<td><p>Bestilling boliginforapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>ForespoerselOmOpplysningerFraforretningsfoerer</p></td>
 			<td><p>Megler</p></td>
 		</tr>
 		<tr>
 			<td><p>2</p></td>
 			<td><p>Oversendelse av boliginforrapport (meglerpakke)</p></td>
-			<td><p></p></td>
+			<td><p>OpplysningerFraforretningsfoerer</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
 		<tr><th colspan="4">ETTER SALG</th></tr>
@@ -26,20 +26,20 @@
 			<td><p>3</p></td>
 			<td><p>Bestilling av fastprisavklaring med informasjon om solgt pris/salgsmelding/eierskiftemelding 
 </p></td>
-<td><p></p></td>
+<td><p>ForespoerselOmForkjoepsrettAvklaring</p></td>
 			<td><p>Megler</p></td>
 		</tr>
         		<tr>
 			<td><p>4</p></td>
 			<td><p>Bekreftelse på fastprisavklaring/annonsebekreftelse</p></td>
-			<td><p></p></td>
+			<td><p>ForkjoepsrettAvklaringFastprisBekreftelse</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>        		 
         		<tr>
 			<td><p>5</p></td>
-			<td><p>Informasjon om kjøper dersom tatt på forkjøpsrett/informasjon dersom ikke tatt (to mulige meldinger)
+			<td><p>Informasjon om kjøper dersom tatt på forkjøpsrett/informasjon dersom ikke tatt (to mulige utfall)
 </p></td>
-<td><p></p></td>
+<td><p>ForkjoepsrettStatusFastpris</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>	
         		<tr>

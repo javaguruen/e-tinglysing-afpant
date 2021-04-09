@@ -11,7 +11,7 @@ Forretningsfører informerer megler om antall forkjøpsrettberettige som har mel
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForkjoepsrettAvklaring*****
+### ForkjoepsrettAvklaringInteresse
 #### Feltliste 
  
 
