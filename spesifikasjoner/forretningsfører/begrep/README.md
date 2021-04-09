@@ -1,4 +1,10 @@
 # Begrep - definisjoner og forklaring
+## <a name="Meglerpakke">Boligopplysninger / boliginforapport / meglerpakke</a>
+* Opplysninger fra forretningsfører til megler.
+* Er nødvendig for at megler skal kunne gjennomføre markedsføring og salg av en forvaltet eiendom.
+* Gir opplysninger om økonomiske forhold i borettslaget/sameiet/boligaksjeselskapet.
+* Regnskap, vedtekter, ordensregler og referat fra generalforsamling/sameiermøte kan inneholde informasjon som har betydning for salget.
+* Enkelte forretningsførere opererer med forskjellige typer meglerpakker for samme eiendom.
 ## <a name="eierskifte">Eierskifte</a>
 * Gjennomføring av eierskifte på en eiendom som er forvaltet av en forretningsfører.
 * Eierformen kan være eiet (f.eks huseier/velforening), eierseksjon (sameie), borettsandel (borettslag) eller aksje (boligaksjeselskap)
