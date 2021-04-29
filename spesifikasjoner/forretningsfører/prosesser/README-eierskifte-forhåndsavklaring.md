@@ -60,21 +60,21 @@
 			<td><p>8</p></td>
 			<td><p>Forespørsel/søknad om styregodkjenning av ny eier<br> (dersom dette håndteres via forretningsfører)
 </p></td>
-<td><p></p></td>
+<td><p>ForespoerselOmStyregodkjenning</p></td>
 			<td><p>Megler</p></td>
 		</tr>				
         		<tr>
 			<td><p>9</p></td>
 			<td><p>Melding om styregodkjennelse ny eier<br> (dersom dette håndteres via forretningsfører)
 </p></td>
-<td><p></p></td>
+<td><p>StyregodkjenningSvar</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
         		<tr>
 			<td><p>10</p></td>
 			<td><p>Forespørsel om restanser
 </p></td>
-<td><p></p></td>
+<td><p>ForespoerselOmRestanser</p></td>
 			<td><p>Megler</p></td>
 		</tr>
         		<tr>
