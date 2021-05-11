@@ -13,6 +13,10 @@ Megler ønsker å få avklart forkjøpsrett (enten på forhånd eller ved fastpr
 ## Meldingstype (under utarbeidelse)
 ### ForespoerselOmForkjoepsrettAvklaring
 #### Feltliste 
- 
+* Oppdragsnummer
+* Registerenhet (matrikkel / orgnr andel)
+* Eiendommens adresse
+* Selgere (kontaktdetaljer)
+* Metode for forkjøpsrettsavklaring (forhåndsavklaring | fastprisavklaring)
 
 ## Implementasjonsdetaljer

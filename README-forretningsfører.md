@@ -40,7 +40,7 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 
 ### Forespørsel om forkjøpsrettavklaring (forhånds- eller fastprisavklaring)
 * Megler forespør forretningsfører om å avklare forkjøpsrett (enten forhåndsavklaring eller fastprisavklaring)
-* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README.md)
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-forespørsel.md)
 
 ### Svar med bekreftelse på prøving av forkjøpsrett (forhåndsavklaring)
 * Forretningsfører bekrefter at forhåndsavklaring av forkjøpsretten er igangsatt
@@ -51,6 +51,11 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 * Forretningsfører overfører informasjon til megler om hvor mange forkjøpsrettberettige som har meldt sin interesse innen fristen
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-forhåndsavklaring-interesse.md)
 
+### Eierskiftemelding fra megler
+* Overføring av eierskiftemelding fra meglersystem til forretningsfører etter gjennomført aksept
+* Kan sendes flere ganger fra meglersystem ved endringer i grunnlagsdata (tilsvarende DSVE Kjøpekontrakt)
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/eierskiftemeldingframegler/README.md)
+
 ### Svar med bekreftelse på prøving av forkjøpsrett (fastprisavklaring)
 * Forretningsfører bekrefter at fastprisavklaring av forkjøpsretten er igangsatt
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-fastprisavklaring-bekreftelse.md)
@@ -58,12 +63,6 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 ### Informasjon om forkjøpsrett benyttet (fastprisavklaring)
 * Forretningsfører overfører informasjon til megler om forkjøpsrett er benyttet og informasjon om eventuell ny kjøper som har anvendt sin forkjøpsrett
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/forkjøpsrettavklaring/README-fastprisavklaring-avklaring.md)
-
-### Eierskiftemelding fra megler
-* Overføring av eierskiftemelding fra meglersystem til forretningsfører etter gjennomført aksept
-* Kan sendes flere ganger fra meglersystem ved endringer i grunnlagsdata (tilsvarende DSVE Kjøpekontrakt)
-* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/eierskiftemeldingframegler/README.md)
-
 
 ### Forespørsel (søknad) om styregodkjenning (via forretningsfører)
 * Forespørsel fra megler til styret sendt via forretningsfører 
@@ -84,4 +83,11 @@ Muliggjøre en sikker og effektiv utveklsing av standardiserte og strukturerte d
 * Kontonummer og KID for innfrielse
 * [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/restanser/README-svar.md)
 
+### Forespørsel om pantattest (boligaksjeselskap)
+* Forespørsel fra megler om oversikt over notert pant i et gitt aksjeboenhetsnummer | organisasjonsnummer+fødselsnummer
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/boligaksjeselskap-pantattest/README-forespørsel.md)
+
+### Svar på forepørsel om pantattest (boligaksjeselskap)
+* Svar fra forretningsfører om notert pant i et gitt aksjeboenhetsnummer
+* [Oversikt og spesifikasjoner](spesifikasjoner/forretningsfører/boligaksjeselskap-pantattest/README-svar.md)
 

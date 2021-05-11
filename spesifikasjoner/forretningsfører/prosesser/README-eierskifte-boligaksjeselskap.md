@@ -54,7 +54,7 @@
 			<td><p>9</p></td>
 			<td><p>Svar på restanser
 </p></td>
-<td><p></p></td>
+<td><p>RestanserSvar</p></td>
 			<td><p>Forretningsfører</p></td>
 		</tr>
         		<tr>

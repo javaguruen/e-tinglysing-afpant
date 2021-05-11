@@ -13,6 +13,7 @@ Forretningsfører bekrefter til megler at prøving av forkjøpsrett er igangsatt
 ## Meldingstype (under utarbeidelse)
 ### ForkjoepsrettAvklaringForhaandsavklaringBekreftelse
 #### Feltliste 
+* Meldefrist
  
 
 ## Implementasjonsdetaljer
