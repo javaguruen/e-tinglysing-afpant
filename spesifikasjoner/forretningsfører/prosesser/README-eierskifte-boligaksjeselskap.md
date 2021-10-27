@@ -12,7 +12,7 @@
 		<tr>
 			<td><p>1</p></td>
 			<td><p>Bestilling boliginforapport (meglerpakke)</p></td>
-			<td><p>ForespoerselOmOpplysningerFraforretningsfoerer</p></td>
+			<td><p>ForespoerselOmOpplysningerFraForretningsfoerer</p></td>
 			<td><p>Megler</p></td>
 		</tr>
 		<tr>

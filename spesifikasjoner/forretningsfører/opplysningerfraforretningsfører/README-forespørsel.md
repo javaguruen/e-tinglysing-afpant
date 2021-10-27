@@ -1,6 +1,6 @@
 # Forespørsel om opplysninger fra forretningsfører (meglerpakke)
 ## Introduksjon
-Forespørsel om opplysninger fra forretningsfører som megler behøver for markedsføring, salg og korrekt oppgjør av eiendommen.
+Forespørsel om opplysninger fra forretningsfører (meglerpakke) som megler behøver for markedsføring, salg og korrekt oppgjør av eiendommen.
 
 ## Referat fra arbeidsgruppe 
 
@@ -11,7 +11,7 @@ Forespørsel om opplysninger fra forretningsfører som megler behøver for marke
 ## Flytskisse
 
 ## Meldingstype (under utarbeidelse)
-### ForespoerselOmOpplysningerFraforretningsfoerer
+### ForespoerselOmOpplysningerFraForretningsfoerer
 #### Feltliste
 * Oppdragsnummer
 * Registerenhet (matrikkel / orgnr andel)
