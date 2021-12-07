@@ -736,9 +736,11 @@
 				<xs:element name="sameie" type="Sameie"/>
 				<xs:element name="borettslag" type="Borettslag"/>
 				<xs:element name="aksjeleilighet" type="Boligaksjeselskap"/>
+				<xs:element name="annet" type="AnnetForvaltetSelskap"/>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
+	
 	<xs:complexType name="Sameie">
 		<xs:complexContent>
 			<xs:extension base="ForvaltetSelskap">
@@ -782,6 +784,16 @@
 					<xs:element minOccurs="0" maxOccurs="1" name="fellesutgifterFordeling" type="xs:string"/>
 					<xs:element minOccurs="1" maxOccurs="1" name="forkjoepsrettForAksjeeiere" type="xs:boolean"/>
 					<xs:element minOccurs="1" maxOccurs="1" name="besitterAvOriginaleAdkomstdokumenter" type="Organisasjon"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="AnnetForvaltetSelskap">
+		<xs:complexContent>
+			<xs:extension base="ForvaltetSelskap">
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="selskapsType" type="xs:string"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
