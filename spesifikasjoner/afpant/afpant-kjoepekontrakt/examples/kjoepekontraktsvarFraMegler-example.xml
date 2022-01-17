@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="../afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl" ?>
+<!-- <?xml-stylesheet href="../afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl" ?> -->
+<?xml-stylesheet href="https://raw.githubusercontent.com/bitsnorge/e-tinglysing-afpant/feature/kjoepekontrakt-stylesheet_endringer/spesifikasjoner/afpant/afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl" ?>
 <kjoepekontraktsvarFraMegler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../afpant/afpant-model/xsd/dsve-1.0.0.xsd">
   <kjoepekontrakter>
     <kjoepekontrakt>
