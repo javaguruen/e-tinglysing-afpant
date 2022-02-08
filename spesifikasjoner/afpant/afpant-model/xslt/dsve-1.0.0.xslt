@@ -112,6 +112,16 @@
           color: grey;
           font-size: 11px
           }
+
+          .kommentar {
+          color: grey;
+          font-size: 10px;
+          font-style: italic;
+          }
+
+          .tall {
+          text-align:right;
+          }
         </style>
       </head>
       <body>
@@ -187,7 +197,7 @@
 
   <xsl:template match="/kjoepekontraktsvarFraMegler/kjoepekontrakter/kjoepekontrakt">
     <h2 class="overskrift">
-      <xsl:text>Kjøpekontrakt </xsl:text>
+      <xsl:text>Kjøpekontrakt</xsl:text>&#160;-&#160;<i><xsl:value-of select="megler/referanse"/></i>
     </h2>
     <hr/>
     <xsl:call-template name="footerForH1">
@@ -793,9 +803,9 @@
               <div class="celle kol1">
                 <xsl:text>Kjøpesum:&#x20;</xsl:text>
               </div>
-              <div class="celle kol2">
+              <div class="celle tall">
                 <xsl:call-template name="formatNumber">
-                  <xsl:with-param name="prefix" select="'kr. '"/>
+                  <xsl:with-param name="prefix" select=""/>
                   <xsl:with-param name="numericValue" select="oppgjoersinformasjon/kjoepesum"/>
                 </xsl:call-template>
               </div>
@@ -804,20 +814,21 @@
               <div class="celle">
                 <xsl:text>Omkostninger:&#x20;</xsl:text>
               </div>
-              <div class="celle">
+              <div class="celle tall">
                 <xsl:call-template name="formatNumber">
-                  <xsl:with-param name="prefix" select="'kr. '"/>
+                  <xsl:with-param name="prefix" select=""/>
                   <xsl:with-param name="numericValue" select="oppgjoersinformasjon/omkostningerkjoeper"/>
                 </xsl:call-template>
               </div>
             </div>
+
             <div class="rad">
               <div class="celle">
                 <xsl:text>Andel fellesgjeld:&#x20;</xsl:text>
               </div>
-              <div class="celle">
+              <div class="celle tall">
                 <xsl:call-template name="formatNumber">
-                  <xsl:with-param name="prefix" select="'kr. '"/>
+                  <xsl:with-param name="prefix" select=""/>
                   <xsl:with-param name="numericValue" select="oppgjoersinformasjon/andelfellesgjeld"/>
                 </xsl:call-template>
               </div>
@@ -826,9 +837,9 @@
               <div class="celle">
                 <xsl:text>Andel fellesformue:&#x20;</xsl:text>
               </div>
-              <div class="celle">
+              <div class="celle tall">
                 <xsl:call-template name="formatNumber">
-                  <xsl:with-param name="prefix" select="'kr. '"/>
+                  <xsl:with-param name="prefix" select=""/>
                   <xsl:with-param name="numericValue" select="oppgjoersinformasjon/andelfellesformue"/>
                 </xsl:call-template>
               </div>
@@ -851,24 +862,6 @@
                 <xsl:call-template name="dato">
                   <xsl:with-param name="dato" select="oppgjoersinformasjon/overtagelsesdato"/>
                 </xsl:call-template>
-              </div>
-            </div>
-            <div class="rad">
-              <div class="celle">
-                <xsl:text>Spesielle forhold:&#x20;</xsl:text>
-              </div>
-              <div class="celle">
-                <xsl:if test="oppgjoersinformasjon/spesielleforhold='true'">Ja</xsl:if>
-                <xsl:if test="oppgjoersinformasjon/spesielleforhold='false'">Nei</xsl:if>
-              </div>
-            </div>
-            <div class="rad">
-              <div class="celle">
-                <xsl:text>Elektronisk tinglysing:&#x20;</xsl:text>
-              </div>
-              <div class="celle">
-                <xsl:if test="oppgjoersinformasjon/oenskerelektronisktinglysing">Ja</xsl:if>
-                <xsl:if test="not(oppgjoersinformasjon/oenskerelektronisktinglysing)">Nei</xsl:if>
               </div>
             </div>
           </div>
@@ -933,10 +926,18 @@
   <xsl:template name="salgsobjektvisning">
     <xsl:param name="salgsobjekter"/>
     <xsl:for-each select="$salgsobjekter/salgsobjekt">
-      <div class="listeelement">
+
+      <div class="hovedseksjon">
+        <xsl:call-template name="seksjon">
+          <xsl:with-param name="tittel" select="'Salgsobjekt'"/>
+        </xsl:call-template>
+
+        <!--        <div class="listeelement">-->
         <xsl:call-template name="salgsobjekt">
           <xsl:with-param name="salgsobjekt" select="."/>
         </xsl:call-template>
+        <!--        </div>-->
+
       </div>
     </xsl:for-each>
   </xsl:template>
@@ -967,6 +968,12 @@
         <xsl:call-template name="matrikkel">
           <xsl:with-param name="matrikkel" select="$salgsobjekt/matrikkelSalgsobjekt/matrikkel"/>
         </xsl:call-template>
+        <xsl:if test="$salgsobjekt/matrikkelSalgsobjekt/arealer">
+          <xsl:call-template name="arealer">
+            <xsl:with-param name="arealerInput" select="$salgsobjekt/matrikkelSalgsobjekt/arealer"/>
+          </xsl:call-template>
+        </xsl:if>
+
       </xsl:if>
       <xsl:if test="$salgsobjekt/borettsandelSalgsobjekt">
         <xsl:text>Borettsandel</xsl:text>
@@ -978,6 +985,13 @@
         <xsl:call-template name="borettsandel">
           <xsl:with-param name="borettsandel" select="$salgsobjekt/borettsandelSalgsobjekt/borettsandel"/>
         </xsl:call-template>
+
+        <xsl:if test="$salgsobjekt/borettsandelSalgsobjekt/arealer">
+          <xsl:call-template name="arealer">
+            <xsl:with-param name="arealerInput" select="$salgsobjekt/borettsandelSalgsobjekt/arealer"/>
+          </xsl:call-template>
+        </xsl:if>
+
       </xsl:if>
       <xsl:if test="$salgsobjekt/aksjeleilighetSalgsobjekt">
         <xsl:text>Aksjeleilighet</xsl:text>
@@ -989,11 +1003,25 @@
         <xsl:call-template name="aksjeleilighet">
           <xsl:with-param name="aksjeleilighet" select="$salgsobjekt/aksjeleilighetSalgsobjekt/aksjeleilighet"/>
         </xsl:call-template>
+
+        <xsl:if test="$salgsobjekt/aksjeleilighetSalgsobjekt/arealer">
+          <xsl:call-template name="arealer">
+            <xsl:with-param name="arealerInput" select="$salgsobjekt/aksjeleilighetSalgsobjekt/arealer"/>
+          </xsl:call-template>
+        </xsl:if>
       </xsl:if>
     </div>
+
     <xsl:call-template name="andelshavere">
       <xsl:with-param name="salgsobjekt" select="$salgsobjekt"/>
     </xsl:call-template>
+
+    <xsl:if test="$salgsobjekt/matrikkelSalgsobjekt/realsameier">
+      <xsl:call-template name="realsameier">
+        <xsl:with-param name="realsameierInput" select="$salgsobjekt/matrikkelSalgsobjekt/realsameier"/>
+      </xsl:call-template>
+    </xsl:if>
+
   </xsl:template>
 
   <xsl:template name="registerenhet">
@@ -1063,6 +1091,71 @@
     </div>
   </xsl:template>
 
+  <xsl:template name="realsameier">
+    <xsl:param name="realsameierInput"/>
+    <div class="hovedseksjon">
+      <xsl:call-template name="seksjonMedKommentar">
+        <xsl:with-param name="tittel" select="'Realsameier'"/>
+        <xsl:with-param name="kommentartext" select="'Skal ikke inngå i pantedokument'"/>
+      </xsl:call-template>
+      <div class="tabell innhold">
+        <div class="kropp">
+          <div class="rad headerrad">
+            <div class="celle">Matrikkel</div>
+            <div class="celle">Andel</div>
+          </div>
+          <xsl:for-each select="$realsameierInput/realsameie">
+            <div class="rad">
+
+              <div class="celle kol1">
+                <xsl:call-template name="matrikkelKortform">
+                  <xsl:with-param name="matrikkel" select="./matrikkel"/>
+                </xsl:call-template>
+              </div>
+              <div class="celle" style="min-width:120px;">
+                <xsl:value-of select="./eierbroek/@teller"/>
+                <xsl:text>/</xsl:text>
+                <xsl:value-of select="./eierbroek/@nevner"/>
+              </div>
+            </div>
+          </xsl:for-each>
+
+        </div>
+      </div>
+    </div>
+  </xsl:template>
+
+  <xsl:template name="arealer">
+    <xsl:param name="arealerInput"/>
+
+    <div class="hovedseksjon">
+      <xsl:call-template name="seksjon">
+        <xsl:with-param name="tittel" select="'Areal'"/>
+      </xsl:call-template>
+
+      <div class="tabell innhold">
+        <div class="kropp">
+          <div class="rad headerrad">
+            <div class="celle">Areal type</div>
+            <div class="celle">Kvadratmeter</div>
+          </div>
+          <xsl:for-each select="$arealerInput/areal">
+            <div class="rad">
+
+              <div class="celle kol1">
+                <xsl:value-of select="./@arealtype"/>
+              </div>
+              <div class="celle tall" style="min-width:60px;">
+                <xsl:value-of select="./kvadratmeter"/>
+              </div>
+            </div>
+          </xsl:for-each>
+
+        </div>
+      </div>
+    </div>
+  </xsl:template>
+
   <xsl:template name="matrikkel">
     <xsl:param name="matrikkel"/>
     <div>
@@ -1083,6 +1176,37 @@
         <xsl:text>,&#x20;festenr.:&#x20;</xsl:text>
         <xsl:value-of select="$matrikkel/@festenummer"/>
       </xsl:if>
+    </div>
+  </xsl:template>
+
+  <xsl:template name="matrikkelKortform">
+    <xsl:param name="matrikkel"/>
+    <div>
+      <xsl:value-of select="$matrikkel/@kommunenavn"/>
+      <xsl:text>&#160;</xsl:text>
+      <xsl:value-of select="$matrikkel/@kommunenummer"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="$matrikkel/@gaardsnummer"/>
+      <xsl:text>/</xsl:text>
+      <xsl:value-of select="$matrikkel/@bruksnummer"/>
+      <xsl:text>/</xsl:text>
+      <xsl:choose>
+        <xsl:when test="not($matrikkel/@seksjonsnummer) or $matrikkel/@seksjonsnummer = ''">
+          <xsl:text>0</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$matrikkel/@seksjonsnummer"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>/</xsl:text>
+      <xsl:choose>
+        <xsl:when test="not($matrikkel/@festenummer) or $matrikkel/@festenummer = ''">
+          <xsl:text>0</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$matrikkel/@festenummer"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </div>
   </xsl:template>
 
@@ -1108,10 +1232,6 @@
 
   <xsl:template name="andelshavere">
     <xsl:param name="salgsobjekt"/>
-    <div class="hovedseksjon">
-      <xsl:call-template name="seksjon">
-        <xsl:with-param name="tittel" select="'Parter'"/>
-      </xsl:call-template>
       <div class="tabell innhold">
         <div class="kropp">
           <xsl:call-template name="listRollerMedAndel">
@@ -1128,7 +1248,6 @@
           </xsl:call-template>
         </div>
       </div>
-    </div>
   </xsl:template>
 
   <xsl:template name="parter">
@@ -1316,6 +1435,14 @@
     </div>
   </xsl:template>
 
+  <xsl:template name="seksjonMedKommentar">
+    <xsl:param name="tittel"/>
+    <xsl:param name="kommentartext"/>
+    <div class="seksjonsoverskrift">
+      <xsl:value-of select="$tittel"/><br/><span class="kommentar"><xsl:value-of select="$kommentartext"/></span>
+    </div>
+  </xsl:template>
+
   <xsl:template name="info">
     <xsl:text>Linker:&#x20;</xsl:text>
     <a href="{salgsoppgave}" target="_blank">Salgsoppgave</a>
@@ -1436,25 +1563,38 @@
                   <xsl:with-param name="organisasjon" select="megler"/>
                 </xsl:call-template>
               </div>
+              <div style="padding-bottom:8px;">
+                <div>Referanse:
+                  <xsl:value-of select="megler/referanse"/>
+                </div>
+              </div>
               <xsl:call-template name="kontaktperson">
                 <xsl:with-param name="kontakt" select="megler/ansvarligmegler"/>
                 <xsl:with-param name="referanse" select="megler/referanse"/>
               </xsl:call-template>
             </xsl:if>
+            <div>Referanse:
+              <xsl:value-of select="megler/referanse"/>
+            </div>
           </div>
-          <div class="celle">
+        </div>
+      </div>
+    </div>
+
+    <div class="hovedseksjon">
+      <xsl:call-template name="seksjon">
+        <xsl:with-param name="tittel" select="'Oppgjørsavdeling'"/>
+      </xsl:call-template>
+      <div class="tabell innhold">
+        <div class="rad">
+          <div class="celle kol1">
             <xsl:if test="megler/oppgjoersavdeling">
-              <xsl:text>Oppgjørsavdeling:&#x20;</xsl:text>
               <div style="padding-bottom:8px;">
                 <xsl:call-template name="organisasjon">
                   <xsl:with-param name="organisasjon" select="megler/oppgjoersavdeling"/>
                 </xsl:call-template>
               </div>
             </xsl:if>
-            <div>
-              <div>Referanse:</div>
-              <xsl:value-of select="megler/referanse"/>
-            </div>
           </div>
         </div>
       </div>

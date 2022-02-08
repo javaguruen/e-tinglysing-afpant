@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- <?xml-stylesheet href="../afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl" ?> -->
-<?xml-stylesheet href="https://raw.githubusercontent.com/bitsnorge/e-tinglysing-afpant/feature/kjoepekontrakt-stylesheet_endringer/spesifikasjoner/afpant/afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl" ?>
+<?xml-stylesheet href="../../afpant-model/xslt/dsve-1.0.0.xslt" type="text/xsl"?>
 <kjoepekontraktsvarFraMegler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../afpant/afpant-model/xsd/dsve-1.0.0.xsd">
   <kjoepekontrakter>
     <kjoepekontrakt>
       <bank id="945811714">
         <foretaksnavn>DNB Eiendom</foretaksnavn>
-        <referanse>OPGNR-321</referanse>
+        <referanse>BANKREFERANSE321</referanse>
       </bank>
       <megler id="910968955">
         <foretaksnavn>DNB Eiendom</foretaksnavn>
@@ -16,7 +15,7 @@
           <telefondirekte>99223452</telefondirekte>
           <telefon>55300455</telefon>
         </ansvarligmegler>
-        <referanse>OPGNR-123</referanse>
+        <referanse>MEGLERREFERANSE123</referanse>
         <oppgjoersavdeling id="912345678">
           <foretaksnavn>Megleroppjør AS</foretaksnavn>
         </oppgjoersavdeling>
@@ -34,6 +33,20 @@
         <salgsobjekt> <!-- Leilighet -->
           <matrikkelSalgsobjekt>
             <matrikkel kommunenavn="Bergen" kommunenummer="4601" gaardsnummer="21" bruksnummer="275" festenummer="0" seksjonsnummer="1" eiendomsnivaa="E"/>
+            <realsameier>
+              <realsameie>
+                <matrikkel kommunenavn="Bergen" kommunenummer="4601" gaardsnummer="21" bruksnummer="276" eiendomsnivaa="E"/>
+                <eierbroek teller="1" nevner="123"/>
+              </realsameie>
+            </realsameier>
+            <arealer>
+              <areal arealtype="TOMT">
+                <kvadratmeter>1024</kvadratmeter>
+              </areal>
+              <areal arealtype="PROM">
+                <kvadratmeter>100</kvadratmeter>
+              </areal>
+            </arealer>
           </matrikkelSalgsobjekt>
           <parter>
             <selgere>
@@ -131,7 +144,7 @@
     <kjoepekontrakt>
       <bank id="945811714">
         <foretaksnavn>DNB Eiendom</foretaksnavn>
-        <referanse>OPGNR-123</referanse>
+        <referanse>BANKREFERANSE124</referanse>
       </bank>
       <megler id="910968955">
         <foretaksnavn>DNB Eiendom</foretaksnavn>
@@ -141,7 +154,7 @@
           <telefondirekte>99223452</telefondirekte>
           <telefon>55300455</telefon>
         </ansvarligmegler>
-        <referanse>OPGNR-123</referanse>
+        <referanse>MEGLERREFERANSE124</referanse>
         <oppgjoersavdeling id="912345678">
           <foretaksnavn>Megleroppjør AS</foretaksnavn>
         </oppgjoersavdeling>
@@ -157,9 +170,9 @@
       </oppgjoersinformasjon>
       <salgsobjekter>
         <salgsobjekt> <!-- Leilighet -->
-          <matrikkelSalgsobjekt>
-            <matrikkel kommunenavn="Bergen" kommunenummer="4601" gaardsnummer="21" bruksnummer="275" festenummer="0" seksjonsnummer="1" eiendomsnivaa="E"/>
-          </matrikkelSalgsobjekt>
+          <borettsandelSalgsobjekt>
+            <borettsandel borettslagnavn="Borettslag AS" organisasjonsnummer="123456789" andelsnummer="123"/>
+          </borettsandelSalgsobjekt>
           <parter>
             <selgere>
               <rettssubjekt>
@@ -200,53 +213,8 @@
             <poststed>Bergen</poststed>
           </adresse>
         </salgsobjekt>
-        <salgsobjekt> <!-- Garasje -->
-          <matrikkelSalgsobjekt>
-            <matrikkel kommunenavn="Bergen" kommunenummer="4601" gaardsnummer="21" bruksnummer="275" festenummer="0" seksjonsnummer="167" eiendomsnivaa="E"/>
-          </matrikkelSalgsobjekt>
-          <parter>
-            <selgere>
-              <rettssubjekt>
-                <person id="23456789909">
-                  <fornavn>selger</fornavn>
-                  <etternavn>selgersen</etternavn>
-                </person>
-                <andel teller="4" nevner="94"/>
-              </rettssubjekt>
-            </selgere>
-            <kjoepere>
-              <rettssubjekt>
-                <person id="1">
-                  <fornavn>kjøper1</fornavn>
-                  <etternavn>kjøpersen</etternavn>
-                </person>
-                <andel teller="1" nevner="94"/>
-              </rettssubjekt>
-              <rettssubjekt>
-                <person id="2">
-                  <fornavn>kjøper2</fornavn>
-                  <etternavn>kjøpersen</etternavn>
-                </person>
-                <andel teller="1" nevner="94"/>
-              </rettssubjekt>
-              <rettssubjekt>
-                <person id="3">
-                  <fornavn>kjøper3</fornavn>
-                  <etternavn>kjøpersen</etternavn>
-                </person>
-                <andel teller="1" nevner="47"/>
-              </rettssubjekt>
-            </kjoepere>
-          </parter>
-          <adresse>
-            <gatenavn>Krinkelkroken 2</gatenavn>
-            <postnummer>5014</postnummer>
-            <poststed>Bergen</poststed>
-          </adresse>
-        </salgsobjekt>
       </salgsobjekter>
-      <objektstype>ENEBOLIG</objektstype>
-      <objektstypeFritekst>Byggeplass</objektstypeFritekst>
+      <objektstype>LEILIGHET</objektstype>
       <lenkeTilSalgsoppgave>https://vg.no</lenkeTilSalgsoppgave>
       <metadata>
         <ressurser>
